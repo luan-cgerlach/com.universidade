@@ -21,7 +21,17 @@ public class Aluno {
     }
 
     private void matricularDisciplina(Disciplina disciplina) {
+        if(verificarDuplacidadeDeDisiplinas(disciplina) == true && verificarQuantidadeDeDisciplinas() == true){
         disciplinasMatriculadas.add(disciplina);
+        }
+    }
+    
+    private boolean verificarQuantidadeDeDisciplinas() {
+        return disciplinasMatriculadas.size()<5;
+    }
+    
+    private boolean verificarDuplacidadeDeDisiplinas(Disciplina disciplina) {
+        return !disciplinasMatriculadas.contains(disciplina);
     }
     
     public int getCodigo() {
