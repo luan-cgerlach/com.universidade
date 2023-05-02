@@ -20,6 +20,10 @@ public class Aluno {
         this.disciplinasMatriculadas = disciplinasMatriculadas;
     }
 
+    private void matricularDisciplina(Disciplina disciplina) {
+        disciplinasMatriculadas.add(disciplina);
+    }
+    
     public int getCodigo() {
         return codigo;
     }
