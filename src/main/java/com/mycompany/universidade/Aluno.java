@@ -1,5 +1,6 @@
 package com.mycompany.universidade;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Aluno {
@@ -8,8 +9,9 @@ public class Aluno {
     private String matricula;
     private Curso curso;
     private List<Disciplina> disciplinasMatriculadas;
-
+    
     public Aluno() {
+        disciplinasMatriculadas = new ArrayList<>();
     }
 
     public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> disciplinasMatriculadas) {
@@ -32,6 +34,10 @@ public class Aluno {
     
     private boolean verificarDuplacidadeDeDisiplinas(Disciplina disciplina) {
         return !disciplinasMatriculadas.contains(disciplina);
+    }
+    
+    private void listarDisciplinas () {
+        System.out.println(disciplinasMatriculadas.toString());
     }
     
     public int getCodigo() {
