@@ -1,11 +1,12 @@
 package com.mycompany.universidade;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Curso {
     private int codigo;
     private String nome;
-    private List<Disciplina> disciplinas;
+    private List<Disciplina> disciplinas = new ArrayList<>();
 
     public Curso() {
     }
