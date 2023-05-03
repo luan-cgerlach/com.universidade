@@ -22,7 +22,7 @@ public class Aluno {
         this.disciplinasMatriculadas = new ArrayList<>();
     }
 
-    private void matricularDisciplina(Disciplina disciplina) {
+    public void matricularDisciplina(Disciplina disciplina) {
         if(verificarDuplacidadeDeDisiplinas(disciplina) == true && verificarQuantidadeDeDisciplinas() == true){
         disciplinasMatriculadas.add(disciplina);
         }else{
@@ -30,15 +30,15 @@ public class Aluno {
         }
     }
     
-    private boolean verificarQuantidadeDeDisciplinas() {
+    public boolean verificarQuantidadeDeDisciplinas() {
         return disciplinasMatriculadas.size()<5;
     }
     
-    private boolean verificarDuplacidadeDeDisiplinas(Disciplina disciplina) {
+    public boolean verificarDuplacidadeDeDisiplinas(Disciplina disciplina) {
         return !disciplinasMatriculadas.contains(disciplina);
     }
     
-    private void listarDisciplinas () {
+    public void listarDisciplinas () {
         System.out.println(disciplinasMatriculadas.toString() 
         + "/n faltam " +(curso.getDisciplinas().size() - disciplinasMatriculadas.size())+ " disciplinas");
     }
