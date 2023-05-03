@@ -37,7 +37,8 @@ public class Aluno {
     }
     
     private void listarDisciplinas () {
-        System.out.println(disciplinasMatriculadas.toString());
+        System.out.println(disciplinasMatriculadas.toString() 
+        + "/n faltam " +disciplinasMatriculadas.size()+ " disciplinas");
     }
     
     public int getCodigo() {
