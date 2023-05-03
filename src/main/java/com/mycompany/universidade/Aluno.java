@@ -14,12 +14,12 @@ public class Aluno {
         disciplinasMatriculadas = new ArrayList<>();
     }
 
-    public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> disciplinasMatriculadas) {
+    public Aluno(int codigo, String nome, String matricula, Curso curso) {
         this.codigo = codigo;
         this.nome = nome;
         this.matricula = matricula;
         this.curso = curso;
-        this.disciplinasMatriculadas = disciplinasMatriculadas;
+        this.disciplinasMatriculadas = new ArrayList<>();
     }
 
     private void matricularDisciplina(Disciplina disciplina) {
@@ -38,7 +38,7 @@ public class Aluno {
     
     private void listarDisciplinas () {
         System.out.println(disciplinasMatriculadas.toString() 
-        + "/n faltam " +disciplinasMatriculadas.size()+ " disciplinas");
+        + "/n faltam " +(curso.getDisciplinas().size() - disciplinasMatriculadas.size())+ " disciplinas");
     }
     
     public int getCodigo() {
