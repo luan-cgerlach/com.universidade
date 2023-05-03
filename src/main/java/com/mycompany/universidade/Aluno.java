@@ -25,6 +25,8 @@ public class Aluno {
     private void matricularDisciplina(Disciplina disciplina) {
         if(verificarDuplacidadeDeDisiplinas(disciplina) == true && verificarQuantidadeDeDisciplinas() == true){
         disciplinasMatriculadas.add(disciplina);
+        }else{
+            System.out.println("Voçê já esta matriculado em cinco disciplinas, ou nessa");
         }
     }
     
